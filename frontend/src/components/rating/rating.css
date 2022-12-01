@@ -1,0 +1,24 @@
+.ratingStar {
+  gap: 1vw;
+  display: flex;
+}
+
+.ratingStarNoSlider {
+  gap: 1vw;
+  display: flex;
+}
+
+.ratingStar > img {
+  width: 4.25vw;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .ratingStar > img {
+    width: 0.75vw;
+    margin-top: 0.25vw;
+  }
+  .ratingStar {
+    gap: 0.25vw;
+  }
+}

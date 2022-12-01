@@ -1,0 +1,55 @@
+@import "../../main.css";
+
+.littleButton {
+  font-style: var(--text-font);
+  height: 6vw;
+  width: fit-content;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 5vw;
+  border: none;
+  box-shadow: 0.5vw 0.5vw 1vw 0.5vw rgba(0, 0, 0, 0.3);
+  font-size: 3vw;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.littleButton::after {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(201, 198, 198);
+  filter: brightness(115%);
+  transition: all 0.3s ease;
+}
+
+.littleButton:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.littleButton:active {
+  top: 2px;
+}
+
+.littleButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .littleButton {
+    font-size: 1vw;
+    margin-top: 3vh;
+    height: 2.25vw;
+    box-shadow: 0.2vw 0.2vw 0.5vw 0.1vw rgba(0, 0, 0, 0.3);
+  }
+}

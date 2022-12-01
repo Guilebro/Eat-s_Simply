@@ -1,0 +1,295 @@
+@import "../../main.css";
+
+@keyframes shopListNumberScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navbar {
+  background-color: var(--black);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-bottom: 0.125vw solid var(--red);
+}
+
+.iconNavbar {
+  display: flex;
+  gap: 4vw;
+}
+
+.icon-nav {
+  width: 5vw;
+  display: flex;
+}
+
+#contact:hover {
+  content: url("../../public/Icon/contact-hover.png");
+  cursor: pointer;
+}
+
+#account:hover {
+  content: url("../../public/Icon/account-hover.png");
+  cursor: pointer;
+}
+
+#shopping-list:hover {
+  content: url("../../public/Icon/shopping-list-hover.png");
+  cursor: pointer;
+}
+
+#favorite:hover {
+  content: url("../../public/Icon/favorite-hover.png");
+  cursor: pointer;
+}
+
+.navTitle {
+  font-family: var(--title-font);
+  font-size: 4.5vw;
+  letter-spacing: 2px;
+}
+
+.desktopSearchBar {
+  display: none;
+}
+
+.mobileSearchBar {
+  background-color: white;
+  width: 90vw;
+  height: 3.5vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 3vh;
+  padding-left: 2vw;
+  gap: 0.6vw;
+  border: 0.01vw solid #b8b8b8;
+  box-shadow: 0.5vw 0.5vw 1.5vw 0vw rgba(0, 0, 0, 0.25);
+}
+
+.mobileSearchBar > img {
+  width: 4%;
+}
+
+.mobileSearchBarInput {
+  width: 90%;
+  height: 70%;
+  border: none;
+  outline: none;
+  padding: 1vw;
+  font-size: 4vw;
+}
+
+.mobileSearchBarInput::placeholder {
+  font-family: var(--text-font);
+  font-size: 4vw;
+}
+
+.autoCompleteDisplay {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.fullSearchBar {
+  position: absolute;
+  left: 5vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.allResults {
+  width: 90vw;
+  height: 40vw;
+  margin: auto;
+  margin-top: -1px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background-color: white;
+  border: 0.01vw solid #b8b8b8;
+  border-top: none;
+  padding: 1vw;
+  box-shadow: 0.5vw 0.5vw 1.5vw 0vw rgba(0, 0, 0, 0.25);
+}
+
+.mobileSearchBarResult {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  width: 100%;
+  padding: 1vw;
+  border-bottom: 0.01vw solid #b8b8b8;
+}
+
+.mobileSearchBarResult:hover {
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.resultImg {
+  width: 10%;
+}
+
+.resultTitle {
+  font-family: var(--text-font);
+  font-size: 4vw;
+  white-space: pre;
+}
+
+.fullResultTitle {
+  display: flex;
+}
+
+.navLinkTitle {
+  text-decoration: none;
+  color: white;
+}
+
+.iconNavlink {
+  display: flex;
+}
+
+.shopListNumber,
+.favoriteNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 11vw;
+  top: 2vw;
+  font-size: 2.5vw;
+  font-family: var(--text-font);
+  background-color: var(--red);
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 10vw;
+}
+
+.favoriteNumber {
+  right: 1vw;
+}
+
+#NumberScale {
+  animation: shopListNumberScale 0.75s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    height: 4.5vw;
+  }
+
+  .navTitle {
+    font-size: 1.9vw;
+  }
+
+  .navLinkTitle {
+    text-decoration: none;
+    color: white;
+  }
+
+  .icon-nav {
+    width: 2vw;
+  }
+
+  .iconNavbar {
+    gap: 1.5vw;
+  }
+
+  .desktopSearchBar {
+    background-color: white;
+    width: 35vw;
+    height: 2vw;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5vw;
+    gap: 0.6vw;
+  }
+
+  .desktopSearchBar > img {
+    width: 4%;
+  }
+
+  .desktopSearchBarInput {
+    width: 90%;
+    height: 70%;
+    border: none;
+    outline: none;
+    padding: 1vw;
+    font-size: 1.25vw;
+  }
+
+  .desktopSearchBarInput::placeholder {
+    font-family: var(--text-font);
+    font-size: 1vw;
+  }
+
+  .autoCompleteDisplay {
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    top: 15vw;
+    border: 0.01vw solid #b8b8b8;
+  }
+
+  .allResults {
+    width: 35vw;
+    height: 30vw;
+    position: relative;
+    top: 15vw;
+    z-index: 2;
+  }
+
+  .fullSearchBar {
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+  }
+
+  .desktopSearchBarResult {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    padding: 1vw;
+    border-bottom: 0.01vw solid #b8b8b8;
+    font-size: 3vw;
+  }
+
+  .desktopSearchBarResult:hover {
+    background-color: #f6f6f6;
+    cursor: pointer;
+  }
+
+  .resultTitle {
+    font-size: 1.5vw;
+    color: var(--black);
+  }
+
+  .resultImg {
+    width: 15%;
+  }
+
+  .shopListNumber,
+  .favoriteNumber {
+    width: 1.25vw;
+    height: 1.25vw;
+    font-size: 0.7vw;
+    top: 0.6vw;
+    right: 6vw;
+  }
+
+  .favoriteNumber {
+    right: 2.5vw;
+  }
+}

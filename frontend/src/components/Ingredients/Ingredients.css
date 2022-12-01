@@ -1,0 +1,22 @@
+@import "../../main.css";
+
+.ingredients {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 8px;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 0.5vh;
+}
+
+.checkboxStyle {
+  background-color: black;
+  accent-color: white;
+}

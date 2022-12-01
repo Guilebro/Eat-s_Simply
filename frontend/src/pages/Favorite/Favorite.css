@@ -1,0 +1,6 @@
+@import "../../main.css";
+
+.favoritePage {
+  display: flex;
+  justify-content: flex-end;
+}

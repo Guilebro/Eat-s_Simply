@@ -1,0 +1,87 @@
+@import "../../main.css";
+
+@keyframes title {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes loadPage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loadingPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  color: white;
+  font-family: var(--title-font);
+  font-size: 10vw;
+  display: flex;
+  white-space: pre;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw;
+  animation: loadPage 1.5s ease-out 2.75s forwards;
+  position: fixed;
+  z-index: 3;
+}
+
+.loadingPageContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.loadingTitle {
+  overflow: hidden;
+  animation: title 1.75s linear;
+}
+
+.loadingLine {
+  border-bottom: 1.5vw solid var(--red);
+  margin-bottom: 0.75vw;
+  border-radius: 10vw;
+  animation: line 1s ease-out 1.75s forwards;
+  width: 0;
+}
+
+#secondLoadingLine {
+  align-self: flex-end;
+}
+
+.loadingSpan {
+  font-size: 10vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .loadingPage {
+    font-size: 5vw;
+  }
+
+  .loadingSpan {
+    font-size: 5vw;
+  }
+
+  .loadingLine {
+    border-bottom: 0.5vw solid var(--red);
+  }
+}

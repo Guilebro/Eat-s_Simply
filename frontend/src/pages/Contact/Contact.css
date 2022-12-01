@@ -1,0 +1,230 @@
+@import "../../main.css";
+
+@keyframes sendEmail {
+  14% {
+    transform: rotate(390deg);
+    content: url("/Icon/email.png");
+    width: 15%;
+    opacity: 1;
+  }
+  15% {
+    transform: rotate(0deg);
+    content: url("/Icon/send.png");
+    width: 20%;
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(15vw);
+  }
+  42% {
+    width: 20%;
+  }
+  43% {
+    width: 0;
+  }
+  45% {
+    width: 0;
+    transform: translateX(0);
+  }
+  48% {
+    width: 20%;
+    content: url("/Icon/validate.png");
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 20%;
+    content: url("/Icon/validate.png");
+  }
+}
+
+@keyframes redCrossShaking {
+  from {
+    transform: translate(-0.1vw);
+  }
+  to {
+    transform: translate(0.1vw);
+  }
+}
+
+.contactContainer {
+  position: relative;
+  top: 8vh;
+  height: 90vh;
+  font-family: var(--text-font);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+  gap: 3vh;
+  font-size: 3.5vw;
+}
+
+.preInput {
+  width: 100%;
+  height: 10vw;
+  border-radius: 2vw;
+  border: solid 0.5vw rgb(112, 112, 112);
+  padding-left: 2vw;
+  padding-right: 2vw;
+  outline: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.messageText {
+  width: 100%;
+  height: 60vw;
+  border-radius: 2vw;
+  border: solid 0.5vw rgb(112, 112, 112);
+  outline: none;
+  padding: 2vw;
+  background-color: white;
+  display: flex;
+}
+
+::placeholder {
+  font-size: 3.5vw;
+}
+
+.contactBtn {
+  font-size: 4.5vw;
+  letter-spacing: 0.1vw;
+  width: 35%;
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 6%;
+}
+
+.sendEmail {
+  width: 15%;
+  z-index: 5;
+}
+
+.sendEmailAnim {
+  animation: sendEmail 5s ease-in-out forwards;
+}
+
+.contactInput,
+.contactText {
+  font-size: 3.5vw;
+  font-family: var(--text-font);
+}
+
+.errorInputContainer {
+  animation: redCrossShaking 0.1s ease-in-out 7;
+  font-family: var(--text-font);
+  text-align: center;
+  font-size: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  height: fit-content;
+  min-width: fit-content;
+}
+
+.errorInput {
+  min-width: fit-content;
+}
+
+.redCross {
+  width: 5vw;
+}
+
+.mailError,
+.subjectError,
+.messageError {
+  margin: -2.25vh;
+  font-size: 2.75vw;
+  align-self: flex-start;
+  margin-left: 1vw;
+  color: var(--red);
+}
+
+.contactInput,
+.contactText {
+  outline: none;
+  width: 100%;
+  border: none;
+}
+
+.errorBorder {
+  border: solid 0.5vw var(--red);
+}
+
+@media screen and (min-width: 1024px) {
+  .contactPage {
+    display: grid;
+    grid-template-columns: 32vw 68vw;
+    grid-template-rows: 1fr;
+    z-index: 0;
+  }
+
+  .contactContainer {
+    grid-area: 1 / 2 / 2 / 3;
+    position: inherit;
+  }
+
+  .contactForm {
+    width: 40vw;
+  }
+
+  .preInput {
+    height: 3vw;
+    border: solid 0.15vw rgb(112, 112, 112);
+    border-radius: 1vw;
+    padding-left: 1vw;
+    font-size: 1vw;
+  }
+
+  .messageText {
+    height: 15vw;
+    border-radius: 1vw;
+    border: solid 0.15vw rgb(112, 112, 112);
+    padding-left: 1vw;
+    padding-top: 1vw;
+    font-size: 1vw;
+  }
+
+  ::placeholder {
+    font-size: 1vw;
+  }
+
+  .contactBtn {
+    height: 3vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.05vw;
+  }
+
+  .redCross {
+    width: 2vw;
+  }
+
+  .contactInput,
+  .contactText {
+    font-size: 1vw;
+  }
+
+  .mailError,
+  .subjectError,
+  .messageError {
+    margin: -2.7vh;
+    margin-left:0;
+    font-size: 1vw;
+  }
+
+  .errorBorder {
+    border: solid 0.15vw var(--red);
+  }
+}

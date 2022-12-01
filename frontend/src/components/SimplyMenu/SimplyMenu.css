@@ -1,0 +1,75 @@
+@import "../../main.css";
+
+.menu {
+  display: flex;
+  overflow-x: scroll;
+  gap: 10vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  align-self: baseline;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menuPic {
+  width: 60vw;
+  border-radius: 5vw;
+  border: 0.5vw solid var(--red);
+}
+
+.menuTitle {
+  margin-top: 5vw;
+  font-family: var(--text-font);
+  font-size: 5vw;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    gap: 1vw;
+    padding: 0;
+    align-self: center;
+    height: 20vw;
+    overflow-x: visible;
+  }
+
+  .menuPic {
+    width: 15vw;
+    border-radius: 2vw;
+    border: 0.3vw solid var(--red);
+  }
+
+  .menuPic:hover {
+    cursor: pointer;
+  }
+
+  .menuTitle {
+    font-size: 1.15vw;
+    margin-top: 1.5vh;
+  }
+  .menuStarter {
+    width: 15vw;
+  }
+  .menuMeal {
+    width: 15vw;
+  }
+
+  .darkPic {
+    opacity: 0.375;
+    z-index: 0;
+  }
+
+  .hoverPic {
+    transition: scale 0.25s ease;
+    scale: 1.2;
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 5vh;
+  }
+
+  .menuDessert {
+    width: 15vw;
+  }
+}

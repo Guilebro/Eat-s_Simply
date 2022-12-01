@@ -1,0 +1,16 @@
+.arrowLeft {
+  width: 6%;
+  position: absolute;
+  left: 1%;
+  top: 30%;
+  z-index: 5;
+}
+
+@media screen and (min-width: 1024px) {
+  .arrowLeft {
+    width: 6%;
+    position: absolute;
+    left: 1%;
+    top: 24%;
+  }
+}

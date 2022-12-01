@@ -1,0 +1,40 @@
+@import "../../main.css";
+
+.meals {
+  color: white;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1%;
+  margin-left: 1vw;
+}
+
+.mealImage {
+  display: block;
+  height: 8vw;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  margin-top: 1vh;
+}
+
+.mealTitle {
+  font-size: 3vw;
+  margin-left: 1vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .mealImage {
+    display: block;
+    height: 5vw;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+  }
+
+  .mealTitle {
+    font-size: 10px;
+  }
+
+  .meals {
+    width: 10vw;
+  }
+}

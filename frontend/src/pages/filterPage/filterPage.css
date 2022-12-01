@@ -1,0 +1,74 @@
+@import "../../main.css";
+
+.icon {
+  width: 25vw;
+  margin-bottom: 2vw;
+}
+
+.icon:hover {
+  scale: 1.2;
+}
+
+.filter-block {
+  display: flex;
+  margin-top: 20vw;
+  flex-direction: column;
+}
+
+.blabla {
+  margin: 2vw;
+  margin-left: auto;
+  text-align: left;
+  margin-right: auto;
+  font-family: var(--text-font);
+}
+
+/* CSS du hoover sous les icones */
+.category-hidden {
+  margin-top: 1vw;
+  display: block;
+  text-align: center;
+  opacity: 1;
+  margin-bottom: 15vw;
+  font-size: 4vw;
+  font-family: var(--text-font);
+}
+
+.category-notHidden {
+  margin-top: 1vw;
+  display: block;
+  text-align: center;
+  color: black;
+  opacity: 1;
+  margin-bottom: 15vw;
+  font-size: 4vw;
+  font-family: var(--text-font);
+}
+
+@media all and (min-width: 1024px) {
+  .icon {
+    width: 12vw;
+    margin-bottom: 2vw;
+  }
+  .filter-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2vw;
+  }
+  #filterPage {
+    margin-left: 31vw;
+  }
+  .category-hidden {
+    opacity: 0;
+  }
+  .category-hidden {
+    opacity: 0;
+    font-size: 2vw;
+    font-family: var(--text-font);
+  }
+
+  .category-notHidden {
+    font-size: 2vw;
+  }
+}

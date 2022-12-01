@@ -1,0 +1,244 @@
+@import "../../main.css";
+
+.Container {
+  width: 50vw;
+  height: 85vh;
+  background-color: var(--light-red);
+  float: right;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: solid;
+  border-color: #cc2337;
+  margin-top: 2.5vh;
+  margin-right: 5vw;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.7);
+  padding: 3vw;
+  padding-top: 3.5vw;
+  padding-bottom: 2vw;
+}
+
+.Text_container {
+  background-color: white;
+  font-family: var(--text-font);
+  width: 100%;
+  height: 40vw;
+  border-radius: 0.5vw;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 0.75vw;
+  line-height: 1.25;
+  text-align: justify;
+  margin-top: 1.5vw;
+}
+.Text_container::-webkit-scrollbar {
+  display: none;
+}
+.ingredientContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+.ingredient {
+  width: 45%;
+}
+
+.ingredientTitle,
+.instructionTitle {
+  text-align: left;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: var(--text-font);
+  font-size: 2.25vw;
+  font-style: italic;
+  color: white;
+  text-shadow: 0.25vw 0.25vw 0.5vw rgba(0, 0, 0, 0.25);
+  margin-bottom: 1vw;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+button {
+  border-radius: 10%;
+  border: 2px;
+}
+.headerContainer {
+  display: flex;
+  gap: 3vw;
+  height: 12.5vw;
+}
+.recipeeTittle {
+  display: flex;
+  justify-content: space-between;
+}
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.areaContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.presentationContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: -7vw;
+}
+.mealPic {
+  width: 12.5vw;
+  height: 12.5vw;
+  border-radius: 1vw;
+  border: solid 0.25vw white;
+  position: relative;
+  right: 17.5%;
+}
+.favorite {
+  width: 2.5vw;
+}
+
+.favoriteScale {
+  transition-timing-function: steps(6, end);
+}
+
+.favoriteScale:active {
+  transform: scale(1.25);
+}
+
+.categoryIcon {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+.areaIcon {
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+.area,
+.categoryTitle {
+  color: white;
+  font-family: var(--text-font);
+  font-size: 1.25vw;
+}
+.categoryAndVideo {
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+}
+.video {
+  width: 50%;
+  height: 100%;
+  border-radius: 0.5vw;
+}
+.category {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+.shoppingBtn,
+.exportRecipeBtn {
+  margin-top: 0;
+}
+
+.instructions {
+  font-size: 1.25vw;
+  margin-top: 1vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .Container {
+    width: 90vw;
+    height: 65vh;
+    margin: auto;
+    position: relative;
+    top: 10vh;
+    float: inherit;
+    box-shadow: 0.5vw 0.5vw 1vw 0.5vw rgba(0, 0, 0, 0.3);
+  }
+  .video {
+    display: none;
+  }
+  .mealPic {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 3vw;
+    right: 7.5%;
+    box-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.3);
+    border: solid 0.8vw white;
+  }
+  h2 {
+    font-size: 6vw;
+    text-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.3);
+  }
+  .favorite {
+    width: 6vw;
+  }
+  .area {
+    font-size: 3.5vw;
+  }
+  .categoryContainer {
+    flex-direction: row;
+    align-items: center;
+    gap: 3vw;
+  }
+  .categoryTitle {
+    font-size: 3.5vw;
+  }
+  .categoryIcon {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .areaIcon {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .headerContainer {
+    height: auto;
+  }
+  .presentationContainer {
+    margin-left: -3vw;
+  }
+  .Text_container {
+    border-radius: 1vh;
+    padding: 3vw;
+    width: 95%;
+    margin: auto;
+    height: 90vw;
+    margin-top: 5vw;
+    margin-bottom: 2vh;
+  }
+
+  .shoppingBtn,
+  .exportRecipeBtn {
+    margin-top: 0;
+  }
+
+  .instructions {
+  font-size: 4vw;
+  margin-top: 1vh;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+}

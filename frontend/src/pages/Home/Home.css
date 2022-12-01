@@ -1,0 +1,91 @@
+@import "../../main.css";
+
+.homePage {
+  overflow: hidden;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeOr {
+  text-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.25);
+  font-size: 8vw;
+  font-style: italic;
+  font-family: var(--title-font);
+  margin: 1vh;
+  color: black;
+}
+
+.homeContainer {
+  position: relative;
+  top: 8vh;
+  height: 90vh;
+}
+
+.reloadBtn {
+  border: none;
+}
+
+.reloadPic {
+  margin-top: 2vh;
+  width: 7.5vw;
+}
+
+.goToFilterBtn {
+  margin-bottom: 15vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    gap: 1vh;
+  }
+
+  .homeOr {
+    font-size: 2.5vw;
+    margin: 0.5vw;
+    text-shadow: 0.25vw 0.25vw 0.5vw rgba(0, 0, 0, 0.25);
+  }
+
+  .homeGrid {
+    display: grid;
+    grid-template-columns: 32vw 68vw;
+    grid-template-rows: 1fr;
+    z-index: 0;
+  }
+
+  .homeBG {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .homeContainer {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: inherit;
+  }
+
+  .goToFilterBtn {
+    margin-bottom: 2vh;
+    width: 20vw;
+    height: 4vw;
+    font-size: 1.25vw;
+    letter-spacing: 0.1vw;
+  }
+  .reloadPic {
+    width: 2.25vw;
+  }
+
+  .reloadBtn {
+    transition: 100ms ease-in-out;
+  }
+
+  .reloadBtn:hover {
+    cursor: pointer;
+    scale: 1.25;
+  }
+}
